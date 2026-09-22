@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { User, Mail, Lock, UserPlus } from 'lucide-react';
-import AuthLayout from '../components/AuthLayout';
-import InputField from '../components/InputField';
+import AuthLayout from '../src/components/AuthLayout';
+import InputField from '../src/components/InputField';
 
 export default function Register() {
   const [formData, setFormData] = useState({ name: '', email: '', password: '' });
@@ -14,7 +14,6 @@ export default function Register() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Datos de Registro:', formData);
-    // Aquí conectarías con tu API de registro
   };
 
   return (
@@ -68,3 +67,4 @@ export default function Register() {
     </AuthLayout>
   );
 }
+
